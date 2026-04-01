@@ -20,7 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-DATABASE_URL = "postgresql://postgres:Glorpie_120@db.obistnacvhkehjkoabas.supabase.co:5432/postgres"
 SECRET_KEY = 'django-insecure-3bnznj5)m5w$fj7w+y^3nvw47m@1ba!hvy7yzcd!mop@ms597)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
