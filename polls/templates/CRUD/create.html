@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" style="height: 768px;
+    max-width: 1024px;
+    margin: auto;
+    background-color: skyblue;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Dashboard</title>
+</head>
+<body style="height: 100%;">
+    <nav class="navbar navbar-expand-lg bg-primary py-4 px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-5 text-white" href="#">Fontaine Scholarship</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active text-white" aria-current="page" href="#">Data Mahasiswa</a>
+                    <a class="nav-link text-white" href="{% url "logout" %}">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mt-5 mx-5">
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="form-floating">
+                        <input name="nama" id="inpNama" type="text" class="form-control" placeholder="Nama">
+                        <label for="inpNama">Nama</label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-floating">
+                        <input name="email" id="inpEmail" type="email" class="form-control" placeholder="Email">
+                        <label for="inpEmail">Email</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="form-floating">
+                        <input name="nim" id="inpNim" type="text" class="form-control" placeholder="NIM">
+                        <label for="inpNim">NIM</label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-floating">
+                        <input name="no" id="inpNo" type="text" class="form-control" placeholder="No HP">
+                        <label for="inpNo">No HP</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <a class="btn btn-warning text-white" href="{% url 'dashboard' %}">Kembali</a>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+<script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+
+</html>

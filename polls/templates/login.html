@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" style="height: 768px;
+    max-width: 1024px;
+    margin: auto;
+    background-color: skyblue;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <title>Login</title>
+</head>
+<body style="height: 100%;
+        padding: 2rem">
+    <form action="" method="post" class="align-middle border border-3 rounded">
+        {% csrf_token %}
+        <div class="p-4">
+            <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="uname" name="uname" placeholder="" required>
+            <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="psw" name="psw" placeholder="Password" required>
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="text-center">
+            <button style="background-color:rgb(76, 193, 232); border-bottom: solid black 2px;border-radius: 16px;" type="submit" id="login-btn" class="btn btn-primary mt-2 fs-5 px-4">Login</button>
+        </div>
+        </div>
+    </form>
+</body>
+
+<script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+
+</html>
