@@ -36,14 +36,14 @@
             <div class="row mb-3">
                 <div class="col">
                     <div class="form-floating">
-                        <input name="nama" id="inpNama" type="text" class="form-control" value="{{ mhs.nama }}">
+                        <input name="nama" id="inpNama" type="text" class="form-control" placeholder="Nama">
                         <label for="inpNama">Nama</label>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="form-floating">
-                        <input name="email" id="inpEmail" type="email" class="form-control" value="{{ mhs.email }}">
+                        <input name="email" id="inpEmail" type="email" class="form-control" placeholder="Email">
                         <label for="inpEmail">Email</label>
                     </div>
                 </div>
@@ -52,22 +52,22 @@
             <div class="row mb-3">
                 <div class="col">
                     <div class="form-floating">
-                        <input name="nim" id="inpNim" type="text" class="form-control" value="{{ mhs.nim }}">
+                        <input name="nim" id="inpNim" type="text" class="form-control" placeholder="NIM">
                         <label for="inpNim">NIM</label>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="form-floating">
-                        <input name="no" id="inpNo" type="text" class="form-control" value="{{ mhs.nomor }}">
+                        <input name="no" id="inpNo" type="text" class="form-control" placeholder="No HP">
                         <label for="inpNo">No HP</label>
                     </div>
                 </div>
             </div>
 
             <div class="">
-                <button type="submit" class="btn btn-primary">Edit</button>
-                <a class="btn btn-warning text-white" href="{% url 'dashboard' %}">Kembali</a>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <a class="btn btn-warning text-white" href="{% url 'mahasiswa' %}">Kembali</a>
             </div>
         </form>
 
